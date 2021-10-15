@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>US Travel Tracker</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<!-- components: item, list, form, nav, footer-->
+
+<div id="app">
+    <v-app>
+
+        <!-- Header -->
+        <navigation-bar title="Travel Tracker" sub-header="My US State Travel List"> </navigation-bar>
+
+
+        <!-- Content Container -->
+        <v-container class="grey lighten-5" id="pageContentContainer">
+            <v-row>
+                <v-col id="colWithVerticalLine">
+
+                    <!-- Input State Form -->
+                    <div class="add-state-form">
+                    <add-state-form
+                            :item="item"
+                            @add-state="addItem"
+                    >
+
+                    </add-state-form>
+                    </div>
+
+                </v-col>
+
+                <v-col>
+
+                    <!-- Array of States -->
+                    <div class="travel-list">
+                        <item-list @remove-item="removeState"></item-list>
+                    </div>
+
+
+                </v-col>
+            </v-row>
+        </v-container>
+
+
+        <!-- Footer-->
+        <custom-footer footer-text="US State Tracker"></custom-footer>
+
+
+    </v-app>
+</div>
+
+<!-- ------------------------------------------------ -->
+
+<!-- Vue Application -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script src="js/app-model.js"></script>
+<script src="js/components/navigationBar.js"></script>
+<script src="js/components/submitBtn.js"></script>
+<script src="js/components/addStateForm.js"></script>
+<script src="js/components/footer.js"></script>
+<script src="js/components/itemList.js"></script>
+<script src="js/components/listItem.js"></script>
+
+
+
+<script src="js/app.js"></script>
+
+</body>
