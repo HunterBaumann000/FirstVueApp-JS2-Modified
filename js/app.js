@@ -35,7 +35,7 @@ const app = new Vue({
 
         },
 
-        removeState(item){
+        removeItem(item){
             this.ItemList.splice(this.ItemList.indexOf(item), 1);
         },
 

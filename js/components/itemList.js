@@ -7,7 +7,7 @@ const ListComponent = Vue.component('ItemList', {
             ItemList: new LocationCollection()
                 .addItem(new State('Wisconsin', '10/23', 'cold and cheese', true))
                 .addItem(new State('Ohio', '11/01', 'cornfields all the way', false))
-                .addItem(new City('Miami', '01/23', 'Nice ocean scenery', true, 'Florida'))
+                .addItem(new City('Tallahassee', '01/23', 'nice city scenery', true, 'Florida'))
         }
     },
 
