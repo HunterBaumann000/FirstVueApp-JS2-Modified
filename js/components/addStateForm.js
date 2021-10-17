@@ -19,7 +19,7 @@ Vue.component('AddStateForm', {
 
     template:
         `
-          <div class="userStateForm">
+     <div class="userStateForm">
       <v-form>
       <v-container>
         <v-row>
@@ -73,6 +73,6 @@ Vue.component('AddStateForm', {
 
       </v-container>
       </v-form>
-          </div>
+     </div>
     `
 });

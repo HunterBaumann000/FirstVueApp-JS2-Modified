@@ -8,13 +8,6 @@ function LocationCollection(){
         return this;
     }
 
-
-    // this.deleteItem = function(item){
-    //
-    //
-    //     return this;
-    // }
-
     // //filter states (Not added yet)
     // this.cityItems = function(){
     //     return this.filter(function(item){
@@ -31,8 +24,6 @@ function LocationCollection(){
 
 }
 
-LocationCollection.prototype = [];
-
 
 function ListItem(location){
 
@@ -45,6 +36,14 @@ function State(name, date, description, wasEnjoyable){
     this.date = date || '12/31/99';
     this.description = description || 'Description Example';
     this.wasEnjoyable = wasEnjoyable;
+}
+
+function Country(name, date, description, wasEnjoyable, favoriteFood){
+    this.name = name || 'Country';
+    this.date = date || '12/31/99';
+    this.description = description || 'Description Example';
+    this.wasEnjoyable = wasEnjoyable;
+    this.favoriteFood = favoriteFood;
 }
 
 function City(name, date, description, wasEnjoyable, theCityState){
