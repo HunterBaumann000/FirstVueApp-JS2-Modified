@@ -27,21 +27,55 @@
             <v-row>
                 <v-col id="colWithVerticalLine">
 
-                    <!-- Input State Form -->
-                    <div class="add-state-form">
-                    <add-state-form
-                            :item="item"
-                            @add-state="addItem"
-                    >
+                    <template>
+                        <v-tabs>
 
-                    </add-state-form>
-                    </div>
+                            <v-tab href="#cityForm">Add a City</v-tab>
+
+                            <v-tab-item value="cityForm">
+                                <!-- Input State Form -->
+                                <div class="add-city-form">
+                                    <add-city-form
+                                            :item="item"
+                                            @add-state="addItem"
+                                    ></add-city-form>
+                                </div>
+                            </v-tab-item>
+
+
+                            <v-tab  href="#stateForm">Add a State</v-tab>
+                            <v-tab-item value="stateForm">
+                                <!-- Input State Form -->
+                                <div class="add-state-form">
+                                    <add-state-form
+                                            :item="item"
+                                            @add-state="addItem"
+                                    ></add-state-form>
+                                </div>
+                            </v-tab-item>
+
+
+                            <v-tab href="#countryForm">Add a Country</v-tab>
+
+                            <v-tab-item value="countryForm">
+                                <!-- Input State Form -->
+                                <div class="add-country-form">
+                                    <add-country-form
+                                            :item="item"
+                                            @add-state="addItem"
+                                    ></add-country-form>
+                                </div>
+                            </v-tab-item>
+
+
+                        </v-tabs>
+                    </template>
 
                 </v-col>
 
                 <v-col>
 
-                    <!-- Array of States -->
+                    <!-- Array of Items -->
                     <div class="travel-list">
                         <item-list :item-list="ItemList" @remove-item="removeItem"></item-list>
                     </div>
@@ -63,13 +97,22 @@
 <!-- Vue Application -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
 <script src="js/app-model.js"></script>
-<script src="js/components/navigationBar.js"></script>
-<script src="js/components/submitBtn.js"></script>
-<script src="js/components/addStateForm.js"></script>
+
+<script src="js/components/form-components/addStateForm.js"></script>
+<script src="js/components/form-components/addCityForm.js"></script>
+<script src="js/components/form-components/addCountryForm.js"></script>
+
+<script src="js/components/item-components/cityItemComponent.js"></script>
+<script src="js/components/item-components/stateItemComponent.js"></script>
+<script src="js/components/item-components/countryItemComponent.js"></script>
+
 <script src="js/components/footer.js"></script>
 <script src="js/components/itemList.js"></script>
 <script src="js/components/listItem.js"></script>
+<script src="js/components/navigationBar.js"></script>
+<script src="js/components/submitBtn.js"></script>
 
 
 
