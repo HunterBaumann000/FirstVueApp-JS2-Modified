@@ -10,8 +10,8 @@ Vue.component('AddCountryForm', {
 
     methods: {
 
-        addUserState() {
-            this.$emit('add-state', this.item)
+        addUserCountry() {
+            this.$emit('add-item', this.item)
         }
 
     },
@@ -26,7 +26,7 @@ Vue.component('AddCountryForm', {
             
             <v-text-field
                 
-                label="State Name"
+                label="Country Name"
                 v-model="item.name"
                 outlined
             ></v-text-field>
@@ -48,6 +48,12 @@ Vue.component('AddCountryForm', {
             outlined
         ></v-text-field>
 
+        <v-text-field
+            label="Greatest Contrast From Home Country"
+            v-model="item.biggestDifference"
+            outlined
+        ></v-text-field>
+
         <v-radio-group
             v-model="item.wasEnjoyable"
             row
@@ -65,8 +71,8 @@ Vue.component('AddCountryForm', {
         </v-radio-group>
         
           <submit-btn
-              button-text="Add State"
-              @submit-Form="addUserState"
+              button-text="Add Country"
+              @submit-Form="addUserCountry"
           >
           </submit-btn>
 

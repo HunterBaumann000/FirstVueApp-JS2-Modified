@@ -1,6 +1,7 @@
 const CountryComponent = Vue.component('Country', {
     props: {
-        item: Country
+        item: Country,
+
     },
 
     methods: {
@@ -19,13 +20,16 @@ const CountryComponent = Vue.component('Country', {
 
       </v-expansion-panel-header>
       <v-expansion-panel-content>
-        {{item.description}} <br>
-        {{item.favoriteFood}}
+        
+        <div style="font-size: 14px;">
+          <b>Country Summary:</b> {{item.description}} <br><br>
+          <b>Biggest Contrast From Home Country:</b> {{item.biggestDifference}}
+        </div>
         
         <br><br><hr>
         <v-row>
           <v-col cols="10">
-            Traveled to {{item.name}}, {{item.theCityState}} on {{item.date}}
+            Traveled to {{item.name}} on {{item.date}}
           </v-col>
           <v-col cols="2">
 

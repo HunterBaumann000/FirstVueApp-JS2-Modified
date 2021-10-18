@@ -12,7 +12,7 @@ Vue.component('AddStateForm', {
     methods: {
 
         addUserState() {
-            this.$emit('add-state', this.item)
+            this.$emit('add-item', this.item)
         }
 
     },

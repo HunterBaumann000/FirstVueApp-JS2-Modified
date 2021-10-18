@@ -1,6 +1,6 @@
 const StateComponent = Vue.component('State', {
     props: {
-        item: State
+        item: State,
     },
 
     methods: {
@@ -19,7 +19,9 @@ const StateComponent = Vue.component('State', {
 
       </v-expansion-panel-header>
       <v-expansion-panel-content>
-        {{item.description}}
+        <div style="font-size: 14px;"> 
+          <b>State Summary:</b> {{item.description}}
+        </div>
         <br><br><hr>
         <v-row>
           <v-col cols="10">
@@ -27,11 +29,11 @@ const StateComponent = Vue.component('State', {
           </v-col>
           <v-col cols="2">
 
+            
+            
 
             <v-icon v-if="item.wasEnjoyable" color="purple">mdi-emoticon-happy-outline</v-icon>
             <v-icon v-else-if="item.wasEnjoyable === false" color="purple">mdi-emoticon-sad-outline</v-icon>
-
-
             |
             <v-icon id="removeState" color="red" @click="deletePanel">mdi-close</v-icon>
           </v-col>

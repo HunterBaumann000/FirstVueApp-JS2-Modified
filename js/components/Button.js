@@ -4,11 +4,11 @@ Vue.component('SubmitBtn', {
         buttonText: {
             type: String,
             default: "Submit",
-        }
+        },
     },
 
     methods: {
-        submit(){
+        doTask(){
             this.$emit('submit-Form')
         },
     },
@@ -18,9 +18,9 @@ Vue.component('SubmitBtn', {
       <div class="my-2">
       <v-btn type="submit"
              color="purple"
-             @click.prevent="submit"
+             @click.prevent="doTask"
              dark large>
-        Add State
+        {{buttonText}}
       </v-btn>
       </div>
       

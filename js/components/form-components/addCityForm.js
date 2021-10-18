@@ -10,15 +10,15 @@ Vue.component('AddCityForm', {
 
     methods: {
 
-        addUserState() {
-            this.$emit('add-state', this.item)
+        addUserCity() {
+            this.$emit('add-item', this.item)
         }
 
     },
 
     template:
         `
-     <div class="userStateForm">
+     <div class="userCityForm">
       <v-form>
       <v-container>
         <v-row>
@@ -26,7 +26,7 @@ Vue.component('AddCityForm', {
             
             <v-text-field
                 
-                label="State Name"
+                label="City Name"
                 v-model="item.name"
                 outlined
             ></v-text-field>
@@ -35,25 +35,36 @@ Vue.component('AddCityForm', {
           <v-col cols="12" sm="6">
             <v-text-field
 
+                label="State of City Name"
+                v-model="item.theCityState"
+                outlined
+            ></v-text-field>
+          </v-col>
+          
+          
+        </v-row>
+
+        <v-row>
+
+          <v-col cols="12" sm="9">
+            <v-text-field
+                label="Summary"
+                v-model="item.description"
+                outlined
+            ></v-text-field>
+          </v-col>
+          
+          <v-col cols="12" sm="3">
+            <v-text-field
                 label="Date Traveled"
                 v-model="item.date"
                 outlined
             ></v-text-field>
           </v-col>
+          
         </v-row>
-
-        <v-text-field
-            label="Summary"
-            v-model="item.description"
-            outlined
-        ></v-text-field>
-
-        <v-text-field
-            label="Summary"
-            v-model="item.description"
-            outlined
-        ></v-text-field>
-
+        
+        
         <v-radio-group
             v-model="item.wasEnjoyable"
             row
@@ -62,6 +73,7 @@ Vue.component('AddCityForm', {
               label="Fun Destination"
               v-bind:value="true"
           ></v-radio>
+          
           <v-radio
               label="Bad Destination"
               v-bind:value="false"
@@ -71,8 +83,8 @@ Vue.component('AddCityForm', {
         </v-radio-group>
         
           <submit-btn
-              button-text="Add State"
-              @submit-Form="addUserState"
+              button-text="Add City"
+              @submit-Form="addUserCity"
           >
           </submit-btn>
 

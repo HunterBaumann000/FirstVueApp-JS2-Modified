@@ -13,26 +13,46 @@ const app = new Vue({
         }
     }),
     data: {
-        item: new State,
 
         ItemList: new LocationCollection()
             .addItem(new State('Wisconsin', '10/23', 'cold and cheese', true))
-            .addItem(new State('Ohio', '11/01', 'cornfields all the way', false))
-            .addItem(new City('Tallahassee', '01/23', 'nice city scenery', true, 'Florida'))
-            .addItem(new Country('Germany', '11/13', 'lots of good food', true, 'noodles'))
+            .addItem(new City('Tallahassee', '01/23', 'cool museums and scenery', true, 'Florida'))
+            .addItem(new Country('Canada', '11/13', 'lots of wildlife and very vast landscapes', true, 'milk is commonly packaged in a bag instead of a carton')),
 
-
-
+        item: new State
 
     },
+
     methods: {
 
-        addItem(){
+        //this works, but the first object will become blank and the list only submits the lasts entry
+
+        // addStateItem(){
+        //
+        //     this.ItemList.addItem(this.item);
+        //
+        //     this.item = new State;
+        // },
+        //
+        // addCityItem(){
+        //     this.ItemList.addItem(this.item);
+        //
+        //     this.item = new City;
+        // },
+        //
+        // addCountryItem(){
+        //     this.ItemList.addItem(this.item);
+        //
+        //     this.item = new Country;
+        // },
+
+        addItem() {
             this.ItemList.addItem(this.item);
 
-            this.item = new State
+            this.item = new Country
 
         },
+
 
         removeItem(item){
             this.ItemList.splice(this.ItemList.indexOf(item), 1);
@@ -41,7 +61,6 @@ const app = new Vue({
     },
 
     computed: {
-
     },
 
 

@@ -13,13 +13,11 @@
 </head>
 <body>
 
-<!-- components: item, list, form, nav, footer-->
-
 <div id="app">
     <v-app>
 
         <!-- Header -->
-        <navigation-bar title="Travel Tracker" sub-header="My US State Travel List"> </navigation-bar>
+        <navigation-bar title="Travel Tracker" sub-header="My Travel List"> </navigation-bar>
 
 
         <!-- Content Container -->
@@ -30,39 +28,37 @@
                     <template>
                         <v-tabs>
 
-                            <v-tab href="#cityForm">Add a City</v-tab>
-
-                            <v-tab-item value="cityForm">
-                                <!-- Input State Form -->
-                                <div class="add-city-form">
-                                    <add-city-form
-                                            :item="item"
-                                            @add-state="addItem"
-                                    ></add-city-form>
-                                </div>
-                            </v-tab-item>
-
-
                             <v-tab  href="#stateForm">Add a State</v-tab>
                             <v-tab-item value="stateForm">
                                 <!-- Input State Form -->
                                 <div class="add-state-form">
                                     <add-state-form
                                             :item="item"
-                                            @add-state="addItem"
+                                            @add-item="addItem"
                                     ></add-state-form>
                                 </div>
                             </v-tab-item>
 
 
-                            <v-tab href="#countryForm">Add a Country</v-tab>
+                            <v-tab href="#cityForm">Add a City</v-tab>
+                            <v-tab-item value="cityForm">
+                                <!-- Input State Form -->
+                                <div class="add-city-form">
+                                    <add-city-form
+                                            :item="item"
+                                            @add-item="addItem"
+                                    ></add-city-form>
+                                </div>
+                            </v-tab-item>
 
+
+                            <v-tab href="#countryForm">Add a Country</v-tab>
                             <v-tab-item value="countryForm">
                                 <!-- Input State Form -->
                                 <div class="add-country-form">
                                     <add-country-form
                                             :item="item"
-                                            @add-state="addItem"
+                                            @add-item="addItem"
                                     ></add-country-form>
                                 </div>
                             </v-tab-item>
@@ -86,7 +82,7 @@
 
 
         <!-- Footer-->
-        <custom-footer footer-text="US State Tracker"></custom-footer>
+        <custom-footer footer-text="Travel Tracker"></custom-footer>
 
 
     </v-app>
@@ -112,7 +108,7 @@
 <script src="js/components/itemList.js"></script>
 <script src="js/components/listItem.js"></script>
 <script src="js/components/navigationBar.js"></script>
-<script src="js/components/submitBtn.js"></script>
+<script src="js/components/Button.js"></script>
 
 
 

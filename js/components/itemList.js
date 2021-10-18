@@ -8,7 +8,7 @@ const ListComponent = Vue.component('ItemList', {
         },
 
         ItemList: {
-            type: Object
+            type: Object,
 
         }
     },
@@ -29,7 +29,7 @@ const ListComponent = Vue.component('ItemList', {
                 </list-item>
                 <p>
                   <br>
-                    <small>Total States Visited: {{ItemList.length}}</small>
+                    <small>Total Places Visited: {{ItemList.length}}</small>
                 </p>
             </div>
     `

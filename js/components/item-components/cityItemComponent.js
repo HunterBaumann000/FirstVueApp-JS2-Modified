@@ -1,6 +1,7 @@
 const CityComponent = Vue.component('City', {
     props: {
-        item: City
+        item: City,
+
     },
 
     methods: {
@@ -19,7 +20,7 @@ const CityComponent = Vue.component('City', {
 
       </v-expansion-panel-header>
       <v-expansion-panel-content>
-        {{item.description}}
+        <div style="font-size: 14px;"> <b>City Summary:</b> {{item.description}}</div>
         <br><br><hr>
         <v-row>
           <v-col cols="10">
